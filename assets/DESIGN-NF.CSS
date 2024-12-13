@@ -8,36 +8,3 @@
     font-size: larger;
     
 }
-#head select {
-    width: 200px;
-    height: 30px;
-    border: 2px solid black;
-    background-color: rgb(232, 232, 232);
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-#select {
-    width: 120px;
-    height: 30px;
-    border: 2px solid black;
-}
-#hc select {
-    height: 21px;
-    background-color: buttonface;
-}
-#al select {
-    height: 21px;
-    background-color: buttonface;
-}
-#wc select {
-    height: 21px;
-    background-color: buttonface;
-}
-#foods select {
-    height: 21px;
-    background-color: buttonface;
-}
-#drinks select {
-    height: 21px;
-    background-color: buttonface;
-}
