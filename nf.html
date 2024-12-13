@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFREAK</title>
+    <link rel="stylesheet" href="assets/DESIGN-NF.CSS">
+    <link rel="shortcut icon" href="images/page_icon.jpg">
+</head>
+
+<body>
+    <div id="head">
+        <h1>WELCOME TO NETFREAK</h1>
+        <label for="sections" style="font-weight: bold;">SECTIONS</label><br>
+        <select name="SECTIONS" id="section">
+            <option value="CHOOSE" hidden>CHOOSE</option>
+            <option value="HC">HARDWARE COMPONENTS</option>
+            <option value="AL">APPLICATION LICENSE</option>
+            <option value="WC">WINDOWS COPY</option>
+            <option value="FOODS">FOODS</option>
+            <option value="DRINKS">DRINKS</option>
+        </select>
+        <input type="submit" id="select" value="SELECT" onclick="showDetails();">
+    </div><br>
+    <!--HARDWARE COMPONENTS-->
+    <div id="hc" hidden>
+        <a href="hdd.html"><button id="btn" value="hdd"><img src="images/icons/HDD_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>HARD DISK DRIVE</button></a>
+        <a href="cpu.html"><button id="btn" value="Central Processing Unit "><img src="images/icons/cpu_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>CENTRAL PROCESSING UNIT</button></a>
+        <button id="btn" value="motherboard"><img src="images/icons/motherboard_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>MOTHERBOARD</button>
+        <button id="btn" value="monitor"><img src="images/icons/monitor_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>MONITOR</button>
+        <button id="btn" value="keyboard"><img src="images/icons/keyboard_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>KEYBOARD</button>
+        <button id="btn" value="mouse"><img src="images/icons/mouse_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>MOUSE</button>
+        <button id="btn" value="speaker"><img src="images/icons/speaker_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>SPEAKER</button>
+        <button id="btn" value="ram"><img src="images/icons/ram_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>RANDOM ACCESS MEMORY</button>
+        <button id="btn" value="psu"><img src="images/icons/psu_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>POWER SUPPLY UNIT</button>
+        <button id="btn" value="case"><img src="images/icons/case_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>SYSTEM CASE</button>
+        <button id="btn" value="cooler"><img src="images/icons/cooler_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>COOLER(CPU FAN)</button>
+        <button id="btn" value="flashdrive"><img src="images/icons/flashdrive_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>FLASHDRIVE</button>
+        <button id="btn" value="cable"><img src="images/icons/cable_icon.jpg" style="width: 100px; height: 100px;" draggable="false"><br>CABLES</button>
+    </div>
+    <!--PERIPHERALS-->
+    <div id="al" hidden>
+        <button>RAM</button>
+        <button>HDD</button>
+        <button>MOUSE</button>
+        <button>KEYBOARD</button>
+        <button>SPEAKER</button>
+    </div>
+    <!--NEEDS-->
+    <div id="wc" hidden>
+        <button>BANDAGE</button>
+        <button>ALCOHOL</button>
+        <button>COTTON</button>
+        <button>BAND AID</button>
+        <select name="med" id="med">
+            <option value="med" hidden>MEDICINE</option>
+            <option value="fever">FOR FEVER</option>
+            <option value="cough">FOR COUGH</option>
+            <option value="cold">FOR COLD</option>
+            <option value="bodypain">FOR BODYPAIN</option>
+        </select>
+    </div>
+    <!--DRINKS-->
+    <div id="foods" hidden>
+        <button>WATER</button>
+        <button>JUICE</button>
+        <button>TEA</button>
+        <button>COFFEE</button>
+        <select name="milktea" id="milktea">
+            <option value="milktea" hidden>MILKTEA</option>
+            <option value="wm">WINTER MELON</option>
+            <option value="cc">COOKIES AND CREAM</option>
+            <option value="choco">CHOCOLATE</option>
+            <option value="df">DARK FOREST</option>
+        </select>
+    </div>
+    <!--DRINKS-->
+    <div id="drinks" hidden>
+        <button>OREO</button>
+        <button>HIRO</button>
+        <button>HANSEL</button>
+        <button>PRESTO</button>
+        <select name="bread" id="bread">
+            <option value="bread" hidden>BREAD</option>
+            <option value="pandesal" hidden>PANDESAL</option>
+            <option value="pancoco">PANDECOCO</option>
+            <option value="ensaymada">ENSAYMADA</option>
+            <option value="monay">MONAY</option>
+            <option value="spanish">SPANISH BREAD</option>
+        </select>
+    </div>
+</body>
+<script src="assets/config.js"></script>
+</html>

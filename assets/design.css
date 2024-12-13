@@ -1,0 +1,45 @@
+body {
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20%;
+    text-align: center;
+    width: 420px;
+    height: 260px;
+    background-color: rgb(175, 175, 175);
+    border: 5px solid black;
+    border-radius: 10px;
+}
+form [id="name"] {
+    text-transform: capitalize;
+    text-indent: 10px;
+    width: 350px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: large;
+}
+form [id="grsc"] {
+    margin: 20px;
+    text-transform: capitalize;
+    text-indent: 10px;
+    width: 350px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: large;
+}
+form [type="submit"] {
+    width: 200px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+form [type="submit"]:hover {
+    background-color: gray;
+}
