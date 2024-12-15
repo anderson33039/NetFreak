@@ -1,58 +1,26 @@
-const sect = document.getElementById("section");
-//varieties
-const hc = document.getElementById("hc");
-const al = document.getElementById("al");
-const wc = document.getElementById("wc");
-const foods = document.getElementById("foods");
-const drinks = document.getElementById("drinks");
+document.getElementById('enter').addEventListener('click', function() {
+    var name = document.getElementById("name").value;
+    var grsc = document.getElementById("grsc").value;
 
+    var userData = {
+        "name": name,
+        "grsc": grsc
+    };
 
-function showDetails() {
-    if (sect.value == "HC") {
-        hc.hidden = false;
-        al.hidden = true;
-        wc.hidden = true;
-        foods.hidden = true;
-        drinks.hidden = true;
-    };
-    if (sect.value == "AL") {
-        al.hidden = false;
-        hc.hidden = true;
-        wc.hidden = true;
-        foods.hidden = true;
-        drinks.hidden = true;
-    };
-    if (sect.value == "WC") {
-        wc.hidden = false;
-        hc.hidden = true;
-        al.hidden = true;
-        foods.hidden = true;
-        drinks.hidden = true;
-    }
-    if (sect.value == "FOODS") {
-        foods.hidden = false;
-        wc.hidden = true;
-        hc.hidden = true;
-        al.hidden = true;
-        drinks.hidden = true;
-    }
-    if (sect.value == "DRINKS") {
-        drinks.hidden = false;
-        foods.hidden = true;
-        wc.hidden = true;
-        hc.hidden = true;
-        al.hidden = true;
-    }
+    localStorage.setItem('userData', JSON.stringify(userData));
+})
+
+function saveReceipt() {
+    var storedData =localStorage.getItem('userData');
+    var userData = JSON.parse(storedData);
+    var meow = localStorage.getItem('product');
+    var arf = localStorage.getItem('revise');
+    var price = localStorage.getItem('price');
+
+    const blob = new Blob(["Name: " + userData.name + "\nGrade/Section: " + userData.grsc + "\n\nOrder: " + meow + "(" + arf + ")\nPrice: " + price], {type: 'text/plain'});
+
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'receipt.txt';
+    link.click();
 }
-document.querySelectorAll("#hc #btn").forEach(button => {
-    button.addEventListener('click', function(event) {
-        const student_name = document.getElementById('name').value;
-        const student_grsc = document.getElementById("grsc").value;
-        
-        const blob = new Blob(["Name: " + student_name + "\nGrade/Section: " + student_grsc + "\n\nOrder: " + this.value], {type: 'text/plain'});
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = 'receipt.txt';
-        link.click();
-    });
-});
